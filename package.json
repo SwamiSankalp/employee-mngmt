@@ -1,0 +1,29 @@
+{
+  "name": "employee-mngmt",
+  "version": "0.0.1",
+  "description": "APIs for a simple Employee Management application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwamiSankalp/employee-mngmt.git"
+  },
+  "author": "@SwamiSankalp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwamiSankalp/employee-mngmt/issues"
+  },
+  "homepage": "https://github.com/SwamiSankalp/employee-mngmt#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.4"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
