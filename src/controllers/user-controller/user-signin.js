@@ -8,7 +8,8 @@
 // DEPENDENCIES
 require("dotenv").config();
 const User = require("../../models/user");
-const jwt = require("jsonwentoken");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
 module.exports = {
   signIn: async (req, res) => {
@@ -27,9 +28,12 @@ module.exports = {
         {
           _id: user._id.toString(),
         },
-        process.env.JWT_SECRET
+        process.env.JWT_SECRET,
+        {
+          expiresIn: "2d",
+        }
       );
-      req.status(200).json({ user, token });
+      res.status(200).json({ user, token });
     }
   },
 };
